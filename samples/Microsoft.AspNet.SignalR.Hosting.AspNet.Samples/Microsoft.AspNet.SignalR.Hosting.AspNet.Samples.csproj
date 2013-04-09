@@ -161,9 +161,14 @@
     <Content Include="Hubs\RealtimeBroadcast\index.html" />
     <Content Include="Hubs\RealtimeBroadcast\Realtime.css" />
     <Content Include="Hubs\RealtimeBroadcast\Realtime.js" />
+    <Content Include="Hubs\Test\clientsCaller.html" />
+    <Content Include="Hubs\Test\clientsGroupSender.html" />
+    <Content Include="Hubs\Test\clientsGroupReceiver.html" />
+    <Content Include="Hubs\Test\chat.html" />
     <Content Include="Hubs\ShapeShare\ShapeShare.css" />
     <Content Include="Hubs\ShapeShare\ShapeShare.js" />
     <Content Include="Hubs\ShapeShare\index.htm" />
+    <Content Include="Hubs\Test\test.js" />
     <Content Include="Raw\Default.aspx" />
     <Content Include="Raw\silverlight.html" />
     <Content Include="Raw\test\basic.htm" />
@@ -282,6 +287,9 @@
     <Compile Include="Hubs\MouseTracking\MouseTracking.cs" />
     <Compile Include="Hubs\RealtimeBroadcast\HighFrequencyTimer.cs" />
     <Compile Include="Hubs\RealtimeBroadcast\Realtime.cs" />
+    <Compile Include="Hubs\Test\NodeEvent.cs" />
+    <Compile Include="Hubs\Test\StressHub.cs" />
+    <Compile Include="Hubs\Test\TestHub.cs" />
     <Compile Include="Hubs\ShapeShare\ShapeShare.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Raw\Default.aspx.cs">

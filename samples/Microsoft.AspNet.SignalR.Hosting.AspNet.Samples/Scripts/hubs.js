@@ -437,6 +437,87 @@
              }
         };
 
+        proxies.stressHub = this.createHubProxy('stressHub'); 
+        proxies.stressHub.client = { };
+        proxies.stressHub.server = {
+            clientsAll: function (message) {
+            /// <summary>Calls the ClientsAll method on the server-side StressHub hub.&#10;Returns a jQuery.Deferred() promise.</summary>
+            /// <param name=\"message\" type=\"Number\">Server side type is System.Int32</param>
+                return proxies.stressHub.invoke.apply(proxies.stressHub, $.merge(["ClientsAll"], $.makeArray(arguments)));
+             },
+
+            clientsCaller: function (message) {
+            /// <summary>Calls the ClientsCaller method on the server-side StressHub hub.&#10;Returns a jQuery.Deferred() promise.</summary>
+            /// <param name=\"message\" type=\"Number\">Server side type is System.Int32</param>
+                return proxies.stressHub.invoke.apply(proxies.stressHub, $.merge(["ClientsCaller"], $.makeArray(arguments)));
+             },
+
+            clientsClient: function (targetConnectionId, message) {
+            /// <summary>Calls the ClientsClient method on the server-side StressHub hub.&#10;Returns a jQuery.Deferred() promise.</summary>
+            /// <param name=\"targetConnectionId\" type=\"String\">Server side type is System.String</param>
+            /// <param name=\"message\" type=\"Number\">Server side type is System.Int32</param>
+                return proxies.stressHub.invoke.apply(proxies.stressHub, $.merge(["ClientsClient"], $.makeArray(arguments)));
+             },
+
+            clientsGroup: function (groupName, message) {
+            /// <summary>Calls the ClientsGroup method on the server-side StressHub hub.&#10;Returns a jQuery.Deferred() promise.</summary>
+            /// <param name=\"groupName\" type=\"String\">Server side type is System.String</param>
+            /// <param name=\"message\" type=\"Number\">Server side type is System.Int32</param>
+                return proxies.stressHub.invoke.apply(proxies.stressHub, $.merge(["ClientsGroup"], $.makeArray(arguments)));
+             },
+
+            groupsAdd: function (connectionId, groupName) {
+            /// <summary>Calls the GroupsAdd method on the server-side StressHub hub.&#10;Returns a jQuery.Deferred() promise.</summary>
+            /// <param name=\"connectionId\" type=\"String\">Server side type is System.String</param>
+            /// <param name=\"groupName\" type=\"String\">Server side type is System.String</param>
+                return proxies.stressHub.invoke.apply(proxies.stressHub, $.merge(["GroupsAdd"], $.makeArray(arguments)));
+             }
+        };
+
+        proxies.testHub = this.createHubProxy('testHub'); 
+        proxies.testHub.client = { };
+        proxies.testHub.server = {
+            clientsAll: function (message) {
+            /// <summary>Calls the ClientsAll method on the server-side TestHub hub.&#10;Returns a jQuery.Deferred() promise.</summary>
+            /// <param name=\"message\" type=\"String\">Server side type is System.String</param>
+                return proxies.testHub.invoke.apply(proxies.testHub, $.merge(["ClientsAll"], $.makeArray(arguments)));
+             },
+
+            clientsCaller: function (message) {
+            /// <summary>Calls the ClientsCaller method on the server-side TestHub hub.&#10;Returns a jQuery.Deferred() promise.</summary>
+            /// <param name=\"message\" type=\"String\">Server side type is System.String</param>
+                return proxies.testHub.invoke.apply(proxies.testHub, $.merge(["ClientsCaller"], $.makeArray(arguments)));
+             },
+
+            clientsClient: function (targetConnectionId, message) {
+            /// <summary>Calls the ClientsClient method on the server-side TestHub hub.&#10;Returns a jQuery.Deferred() promise.</summary>
+            /// <param name=\"targetConnectionId\" type=\"String\">Server side type is System.String</param>
+            /// <param name=\"message\" type=\"String\">Server side type is System.String</param>
+                return proxies.testHub.invoke.apply(proxies.testHub, $.merge(["ClientsClient"], $.makeArray(arguments)));
+             },
+
+            clientsGroup: function (groupName, message) {
+            /// <summary>Calls the ClientsGroup method on the server-side TestHub hub.&#10;Returns a jQuery.Deferred() promise.</summary>
+            /// <param name=\"groupName\" type=\"String\">Server side type is System.String</param>
+            /// <param name=\"message\" type=\"String\">Server side type is System.String</param>
+                return proxies.testHub.invoke.apply(proxies.testHub, $.merge(["ClientsGroup"], $.makeArray(arguments)));
+             },
+
+            groupsAdd: function (connectionId, groupName) {
+            /// <summary>Calls the GroupsAdd method on the server-side TestHub hub.&#10;Returns a jQuery.Deferred() promise.</summary>
+            /// <param name=\"connectionId\" type=\"String\">Server side type is System.String</param>
+            /// <param name=\"groupName\" type=\"String\">Server side type is System.String</param>
+                return proxies.testHub.invoke.apply(proxies.testHub, $.merge(["GroupsAdd"], $.makeArray(arguments)));
+             },
+
+            groupsRemove: function (connectionId, groupName) {
+            /// <summary>Calls the GroupsRemove method on the server-side TestHub hub.&#10;Returns a jQuery.Deferred() promise.</summary>
+            /// <param name=\"connectionId\" type=\"String\">Server side type is System.String</param>
+            /// <param name=\"groupName\" type=\"String\">Server side type is System.String</param>
+                return proxies.testHub.invoke.apply(proxies.testHub, $.merge(["GroupsRemove"], $.makeArray(arguments)));
+             }
+        };
+
         proxies.userAndRoleAuthHub = this.createHubProxy('userAndRoleAuthHub'); 
         proxies.userAndRoleAuthHub.client = { };
         proxies.userAndRoleAuthHub.server = {
